@@ -1,0 +1,142 @@
+function getTotalService() {
+
+ var totalServices = document.getElementsByName("serviceType");
+
+ var count = 0;
+
+ for(var i=0; i<totalServices.length; i++) {
+
+ if(totalServices[i].checked) {
+
+ count++
+
+ }
+
+ }
+
+ return count;
+
+}
+
+function getServiceCost() {
+
+ var totalServices = document.getElementsByName("serviceType");
+
+ var totalCost = 0;
+
+ for(var i=0; i<totalServices.length; i++) {
+
+ if(totalServices[i].checked) {
+
+ switch(totalServices[i].value) {
+
+ case "Cleaning":
+
+ totalCost += 500;
+
+ break;
+
+ case "Repair":
+
+ totalCost += 2500;
+
+ break;
+
+ case "Gas Refill":
+
+ totalCost += 750;
+
+ break;
+
+ case "Relocation":
+totalCost += 1500;
+
+ break;
+
+ case "Filter":
+
+ totalCost += 250;
+
+ break;
+
+ default:
+
+ break;
+
+ }
+
+ }
+
+ }
+
+ return totalCost;
+
+}
+
+function calculateDiscount(serviceCost) {
+
+ serviceCost = serviceCost*0.85;
+
+ return serviceCost;
+
+}
+
+function getYearlyMaintenanceCost() {
+
+ var yearlyMaintenance = document.getElementsByName("yearlyMaintenance");
+
+ if(yearlyMaintenance[0].checked)
+
+ return 1500;
+
+ else
+
+ return 0;
+
+}
+
+function bookAppointment() {
+
+ var totalNumberOfServices = getTotalService();
+
+ var serviceCost = 0;
+
+ if(totalNumberOfServices > 2) {
+
+ serviceCost = calculateDiscount(getServiceCost());
+
+ } else {
+
+ serviceCost = getServiceCost();
+
+ }
+
+ 
+
+ var yearlyMaintenanceCost = getYearlyMaintenanceCost();
+
+ var totalCost = serviceCost + yearlyMaintenanceCost;
+
+ 
+
+ var acType = document.getElementById("acType").value;
+
+ 
+
+ if(yearlyMaintenanceCost) {
+
+ document.getElementById("result").innerHTML = "Your booking for " + acType + " AC service is successful!<br>The estimated service cost with maintenance is Rs." + 
+
+Math.round(totalCost);
+
+ } else {
+
+ document.getElementById("result").innerHTML = "Your booking for " + acType +
+
+ " AC service is successful!<br>The estimated service cost is Rs." + Math.round(totalCost);
+
+ }
+
+ 
+
+}
