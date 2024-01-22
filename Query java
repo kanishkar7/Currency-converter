@@ -1,0 +1,475 @@
+4 public class Query {
+
+ 5 private String queryId;
+
+ 6 private String queryCategory;
+
+ 7 private DataSet primaryDataSet;
+
+ 8 private DataSet secondaryDataSet;
+@Override
+
+ 11 public String toString()
+
+ 12 
+
+{
+
+ 13 String g=""
+
+;
+
+ 14 g+=
+
+("Primary data set
+
+"
+
++
+
+"
+
+\n"
+
+)
+
+;
+
+ 15 g+=
+
+("Theatre id :"+primaryDataSet.getTheatreId()
+
++
+
+"
+
+\n"
+
+)
+
+;
+
+ 16 g+=
+
+("Theatre name :"+primaryDataSet.getTheatreName()
+
++
+
+"
+
+\n"
+
+)
+
+;
+
+ 17 g+=
+
+("Location :"+primaryDataSet.getLocation()
+
++
+
+"
+
+\n"
+
+)
+
+;
+
+ 18 g+=
+
+("No of Screen :"
+
++primaryDataSet.getNoOfScreen()
+
++
+
+"
+
+\n"
+
+)
+
+;
+
+ 19 g+=
+
+("Ticket Cost :"+primaryDataSet.getTicketCost()
+
++
+
+"
+
+\n"
+
+)
+
+;
+
+ 20 
+
+ 21 g+=
+
+("Secondary data set"
+
++
+
+"
+
+\n"
+
+)
+
+;
+
+ 22 g+=
+
+("Theatre id :"+secondaryDataSet.getTheatreId()
+
++
+
+"
+
+\n"
+
+)
+
+;
+
+ 23 g+=
+
+("Theatre name :"+secondaryDataSet.getTheatreName()
+
++
+
+"
+
+\n"
+
+)
+
+;
+
+ 24 g+=
+
+("Location :"+secondaryDataSet.getLocation()
+
++
+
+"
+
+\n"
+
+)
+
+;
+
+ 25 g+=
+
+("No of Screen :"+secondaryDataSet.getNoOfScreen()
+
++
+
+"
+
+\n"
+
+)
+
+;
+
+ 26 g+=
+
+("Ticket Cost :"+secondaryDataSet.getTicketCost()
+
++
+
+"
+
+\n"
+
+)
+
+;
+
+ 27 g+=
+
+("Query id : "+queryId+
+
+"
+
+\n"
+
+)
+
+;
+
+ 28 g+=
+
+("Query category : "+queryCategory+
+
+"
+
+\n"
+
+)
+
+;
+
+ 29 
+
+ 30 return g;
+
+ 31 
+
+}
+
+ 32 public class DataSet
+
+{
+
+ 33 private String theatreId;
+
+ 34 private String theatreName;
+
+ 35 private String location;
+
+ 36 private int noOfScreen;
+
+ 37 private double ticketCost;
+
+ 38 
+
+ 39 public double getTicketCost()
+
+ 40 
+
+{
+
+ 41 return ticketCost;
+
+ 42 
+
+}
+
+ 43 public void setTicketCost
+
+(double a)
+
+ 44 
+
+{
+
+ 45 ticketCost=a;
+
+ 46 
+
+}
+
+ 47 
+
+ 48 public int getNoOfScreen()
+
+ 49 
+
+{
+
+ 50 return noOfScreen;
+
+ 51 
+
+}
+
+ 52 public void setNoOfScreen
+
+(int a)
+
+ 53 
+
+{
+
+ 54 noOfScreen=a;
+
+ 55 
+
+}
+
+ 56 public String getLocation()
+
+ 57 
+
+{
+
+ 58 return location;
+
+ 59 
+
+}
+
+ 60 public void setLocation(String a)
+
+ 61 
+
+{
+
+ 62 location=a;
+
+ 63 
+
+}
+
+ 64 public String getTheatreName ()
+
+ 65 
+
+{
+
+ 66 return theatreName;
+
+ 67 
+
+}
+
+ 68 public void setTheatreName(String a)
+
+ 69 
+
+{
+
+ 70 theatreName=a;
+
+ 71 
+
+}
+
+ 72 
+
+ 73 public String getTheatreId()
+
+ 74 
+
+{
+
+ 75 return theatreId;
+
+ 76 
+
+}
+77 public void setTheatreId(String a)
+
+ 78 
+
+{
+
+ 79 theatreId=a;
+
+ 80 
+
+}
+
+ 81 
+
+}
+
+ 82 public void setSecondaryDataSet(DataSet pD)
+
+ 83 
+
+{
+
+ 84 this.secondaryDataSet=pD;
+
+ 85 
+
+}
+
+ 86 public DataSet getSecondaryDataSet()
+
+ 87 
+
+{
+
+ 88 return this.secondaryDataSet;
+
+ 89 
+
+}
+
+ 90 public void setPrimaryDataSet(DataSet pD)
+
+ 91 
+
+{
+
+ 92 this.primaryDataSet=pD;
+
+ 93 
+
+}
+
+ 94 public DataSet getPrimaryDataSet()
+
+ 95 
+
+{
+
+ 96 return this.primaryDataSet;
+
+ 97 
+
+}
+
+ 98 public void setQueryId (String queryId)
+
+ 99 
+
+{
+
+ 100 this.queryId=queryId;
+
+ 101 
+
+}
+
+ 102 public void setQueryCategory(String queryCategory)
+
+ 103 
+
+{
+
+ 104 this.queryCategory=queryCategory;
+
+ 105 
+
+}
+
+ 106 public String getQueryId()
+
+ 107 
+
+{
+
+ 108 return this.queryId;
+
+ 109 
+
+}
+
+ 110 public String getQueryCategory()
+
+ 111 
+
+{
+
+ 112 return this.queryCategory;
+
+ 113 
+
+}
+
+ 114 
+
+ 115 
+
+}
