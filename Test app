@@ -1,0 +1,190 @@
+TestApplication.java
+
+ 1 import java.util.*;
+
+ 2 public class TestApplication 
+
+{
+
+ 3 //Write the required business logic as expected in the question description
+
+ 4 public static void main (String[] args)
+
+{
+
+ 5 Scanner sc= new Scanner (System.in); 
+
+ 6 Query q= new Query()
+
+;
+
+ 7 Query.DataSet pd= q.new DataSet()
+
+;
+
+ 8 Query.DataSet sd= q.new DataSet()
+
+;
+
+ 9 System.out.println
+
+("Enter the Details for primary data set"
+
+)
+
+;
+
+ 10 System.out.println
+
+("Enter the theatre id"
+
+)
+
+;
+
+ 11 pd.setTheatreId(sc.nextLine()
+
+)
+
+;
+
+ 12 System.out.println
+
+("Enter the theatre name"
+
+)
+
+;
+
+ 13 pd.setTheatreName(sc.nextLine()
+
+)
+
+;
+
+ 14 System.out.println
+
+("Enter the location"
+
+)
+
+;
+
+ 15 pd.setLocation(sc.nextLine()
+
+)
+
+;
+
+ 16 System.out.println
+
+("Enter the no of screens"
+
+)
+
+;
+
+ 17 pd.setNoOfScreen(sc.nextInt()
+
+)
+
+;
+
+ 18 System.out.println
+
+("Enter the ticket cost"
+
+)
+
+;
+
+ 19 pd.setTicketCost(sc.nextDouble()
+
+)
+
+;
+
+ 20 System.out.println
+
+("Enter the Details for secondary data set"
+
+)
+
+;
+
+ 21 System.out.println
+
+("Enter the theatre id"
+
+)
+
+;
+
+ 22 
+
+ 23 String id2=sc.next()
+
+;
+
+ 24 //System.out.println(id2);
+
+ 25 sd.setTheatreId(id2)
+
+;
+
+ 26 System.out.println
+
+("Enter the theatre name"
+
+)
+
+;
+27 sc.nextLine();
+
+ 28 sd.setTheatreName(sc.nextLine());
+
+ 29 System.out.println("Enter the location");
+
+ 30 String gll=sc.nextLine();
+
+ 31 sd.setLocation(gll);
+
+ 32 System.out.println("Enter the no of screens");
+
+ 33 
+
+ 34 //System.out.println(gll);
+
+ 35 //String pp=sc.nextLine();
+
+ 36 //System.out.println(pp);
+
+ 37 
+
+ 38 sd.setNoOfScreen(sc.nextInt());
+
+ 39 System.out.println("Enter the ticket cost");
+
+ 40 sd.setTicketCost(sc.nextDouble());
+
+ 41 sc.nextLine();
+
+ 42 System.out.println("Enter the query id");
+
+ 43 q.setQueryId(sc.nextLine());
+
+ 44 System.out.println("Enter the query category");
+
+ 45 q.setQueryCategory(sc.nextLine());
+
+ 46 
+
+ 47 q.setSecondaryDataSet(sd);
+
+ 48 q.setPrimaryDataSet(pd);
+
+ 49 System.out.println(q.toString());
+
+ 50 }
+
+ 51 }
